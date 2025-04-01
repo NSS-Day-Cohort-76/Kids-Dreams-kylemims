@@ -1,15 +1,32 @@
 import { getChildren } from "./database.js"
 
+
 const children = getChildren()
 
+document.addEventListener(
+    "click", (kidClickEvent) => {
+        const kidsClicked = kidClickEvent.target
+
+        const childWish = kidsClicked.dataset.wish
+        window.alert(`${childWish}`)
+
+    }
+)
+
 export const Kids = () => {
-    let html = "<ol>"
+    let KidHTML = "<ol>"
 
     for (const child of children) {
-        html += `<li data-id="${child.id}" data-type="child" data-wish="${child.wish}">${child,name}</li>`
+        KidHTML += `<li data-id="${child.id}" 
+                    data-type="child" 
+                    data-wish="${child.wish}"
+                    data-name="${child.name}">
+                    ${child.name}</li>`
     }
 
-    html += "</ol>"
-    return html
+    KidHTML += "</ol>"
+    
+    return KidHTML
 }
+
 

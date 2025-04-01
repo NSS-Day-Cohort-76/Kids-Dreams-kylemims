@@ -1,4 +1,5 @@
 import { getChildren } from "./database.js"
+import { getCelebrities } from "./database.js"
 
 const kids = getChildren()
 const celebrities = getCelebrities()
@@ -6,7 +7,7 @@ const celebrities = getCelebrities()
 const findCelebrityMatch = (kidObject, celebrityArray) => {
     let celebrity = null
 
-    for (const celebrity of celebrtyArray) {
+    for (const celebrity of celebrityArray) {
 
     }
 

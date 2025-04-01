@@ -50,6 +50,7 @@ const database = {
         email: "abiddle9@cafepress.com",
         sport: "Football"
     }],
+    
     children: [{
         id: 1,
         name: "Christan Swindles",
@@ -102,3 +103,6 @@ const database = {
         wish: "catching a foul ball at a Major League game!"
     }]
 }
+
+export const getChildren = () => structuredClone(database.children)
+export const getCelebrities = () => structuredClone(database.celebrities)
