@@ -6,9 +6,10 @@ document.addEventListener(
     "click", (celebrityClickEvent) => {
         const celebrityClicked = celebrityClickEvent.target
 
+    if (celebrityClicked.dataset.type === "celebrity") {
         const celebritySport = celebrityClicked.dataset.sport
         window.alert(`${celebritySport}`)
-
+    }
     })
     
 export const Celebrities = () => {

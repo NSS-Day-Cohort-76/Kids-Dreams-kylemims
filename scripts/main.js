@@ -1,6 +1,6 @@
 import { Pairings } from "./Pairings.js"
 import { Celebrities } from "./CelebrityList.js"
-import { Kids } from "./Kids.js"
+import { kiddos } from "./Kids.js"
 
 const mainContainer = document.querySelector("#container")
 
@@ -9,7 +9,7 @@ const applicationHTML = `
     <article class="details">
         <section class="detail--column list details__kids">
             <h2>Kids</h2>
-            ${Kids()}
+            ${kiddos()}
         </section>
         <section class="detail--column details__celebrities">
             <h2>Celebrities</h2>
@@ -17,8 +17,9 @@ const applicationHTML = `
         </section>
     </article>
 
-    <article class="assignments">
+    <article class="pairings">
         <h2>Pairings</h2>
+        ${Pairings()}
     </article>
 `
 
